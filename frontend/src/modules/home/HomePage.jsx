@@ -54,10 +54,10 @@ export function HomePage() {
           </p>
 
           {/* Action CTAs */}
-          <div className="flex flex-wrap items-center gap-4 pt-2">
+          <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-4 pt-2">
             <NavLink
               to="/contact"
-              className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 text-white dark:text-black font-bold text-sm shadow-lg shadow-cyan-500/25 flex items-center gap-2 hover:scale-[1.02] transition-all"
+              className="w-full sm:w-auto justify-center px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 text-white dark:text-black font-bold text-sm shadow-lg shadow-cyan-500/25 flex items-center gap-2 hover:scale-[1.02] transition-all"
             >
               <Mail className="w-4 h-4" />
               <span>Hire Me / Contact</span>
@@ -69,18 +69,18 @@ export function HomePage() {
                 e.preventDefault();
                 alert("Downloading Resume... (Attach resume PDF link in admin)");
               }}
-              className="px-6 py-3.5 rounded-xl glass-card text-slate-700 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-400 border border-slate-200 dark:border-slate-700 hover:border-cyan-500/40 hover:bg-white/90 dark:hover:bg-white/10 text-sm font-semibold flex items-center gap-2 hover:scale-[1.02] shadow-sm dark:shadow-none transition-all"
+              className="w-full sm:w-auto justify-center px-6 py-3.5 rounded-xl glass-card text-slate-900 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-400 border border-slate-200 dark:border-slate-700 hover:border-cyan-500/40 hover:bg-white/90 dark:hover:bg-white/10 text-sm font-semibold flex items-center gap-2 hover:scale-[1.02] shadow-sm dark:shadow-none transition-all"
             >
               <Download className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
               <span>Download Resume</span>
             </a>
 
-            <div className="flex items-center gap-2 ml-auto sm:ml-0">
+            <div className="flex items-center justify-center sm:justify-start gap-4 sm:gap-2 w-full sm:w-auto mt-2 sm:mt-0">
               <a
                 href="https://github.com/sathishkumar"
                 target="_blank"
                 rel="noreferrer"
-                className="p-3 rounded-xl glass-card text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
+                className="p-3 rounded-xl glass-card text-slate-900 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
                 title="GitHub Profile"
               >
                 <Github className="w-5 h-5" />
@@ -89,7 +89,7 @@ export function HomePage() {
                 href="https://linkedin.com/in/sathishkumar"
                 target="_blank"
                 rel="noreferrer"
-                className="p-3 rounded-xl glass-card text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
+                className="p-3 rounded-xl glass-card text-slate-900 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
                 title="LinkedIn Profile"
               >
                 <Linkedin className="w-5 h-5" />
@@ -103,9 +103,9 @@ export function HomePage() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          className="relative group"
+          className="relative group w-full max-w-sm sm:w-auto mx-auto lg:mx-0"
         >
-          <div className="relative w-72 sm:w-80 h-[380px] rounded-3xl glass-panel p-2 border border-cyan-500/20 dark:border-cyan-500/30 flex flex-col items-center overflow-hidden shadow-2xl shadow-cyan-500/10 dark:shadow-cyan-900/20 group">
+          <div className="relative w-full sm:w-80 h-[380px] sm:h-[420px] rounded-3xl glass-panel p-2 border border-cyan-500/20 dark:border-cyan-500/30 flex flex-col items-center overflow-hidden shadow-2xl shadow-cyan-500/10 dark:shadow-cyan-900/20 group">
             <div className="w-full h-full rounded-[1.25rem] overflow-hidden relative transition-transform duration-500">
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0d14] via-[#0a0d14]/40 to-transparent z-10 opacity-90" />
               <img 

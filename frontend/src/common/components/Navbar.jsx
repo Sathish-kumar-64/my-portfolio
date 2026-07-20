@@ -45,7 +45,7 @@ export function Navbar() {
           <img 
             src="/logo.png" 
             alt="Sathish Kumar Logo" 
-            className="h-16 sm:h-20 w-auto object-contain drop-shadow-lg scale-110 origin-left"
+            className="h-10 sm:h-16 w-auto object-contain drop-shadow-lg scale-110 origin-left"
           />
         </NavLink>
 
