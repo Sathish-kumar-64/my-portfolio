@@ -62,7 +62,7 @@ export function Navbar() {
                   `relative px-3.5 py-1.5 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-1.5 ${
                     isActive
                       ? 'text-cyan-600 dark:text-cyan-400 font-semibold'
-                      : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/40'
+                      : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-200/40 dark:bg-slate-800/40'
                   }`
                 }
               >
@@ -103,14 +103,14 @@ export function Navbar() {
         <div className="flex items-center gap-2 lg:hidden">
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-lg glass-card text-slate-300"
+            className="p-2 rounded-lg glass-card text-slate-700 dark:text-slate-300"
           >
             {theme === 'dark' ? <Sun className="w-5 h-5 text-amber-400" /> : <Moon className="w-5 h-5 text-indigo-600" />}
           </button>
           
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-lg glass-card text-slate-300"
+            className="p-2 rounded-lg glass-card text-slate-700 dark:text-slate-300"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -138,7 +138,7 @@ export function Navbar() {
                       `flex items-center gap-2.5 p-3 rounded-xl text-sm font-medium transition-colors ${
                         isActive
                         ? 'bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/30'
-                        : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/40'
+                        : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-200/40 dark:bg-slate-800/40'
                       }`
                     }
                   >
@@ -149,8 +149,8 @@ export function Navbar() {
               })}
             </div>
             
-            <div className="mt-4 pt-4 border-t border-slate-800 flex justify-between items-center">
-              <span className="text-xs text-slate-400">Admin Authentication</span>
+            <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
+              <span className="text-xs text-slate-600 dark:text-slate-400">Admin Authentication</span>
               <NavLink
                 to="/admin/login"
                 onClick={() => setMobileMenuOpen(false)}

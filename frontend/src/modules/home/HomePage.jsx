@@ -135,7 +135,7 @@ export function HomePage() {
 
       {/* Featured Projects Preview */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <div className="flex items-end justify-between border-b border-slate-800/80 pb-4">
+        <div className="flex items-end justify-between border-b border-slate-200/80 dark:border-slate-800/80 pb-4">
           <div>
             <span className="text-xs font-bold uppercase tracking-widest text-cyan-600 dark:text-cyan-400">Portfolio Highlights</span>
             <h2 className="text-3xl font-extrabold text-slate-900 dark:text-slate-100 mt-1">Featured Work</h2>

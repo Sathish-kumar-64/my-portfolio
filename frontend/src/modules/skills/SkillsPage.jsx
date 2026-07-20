@@ -34,8 +34,8 @@ export function SkillsPage() {
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
         <span className="text-xs font-bold uppercase tracking-widest text-cyan-400">Technical Expertise</span>
-        <h1 className="text-4xl font-extrabold text-slate-100">Skills & Mastery</h1>
-        <p className="text-slate-400 text-lg">
+        <h1 className="text-4xl font-extrabold text-slate-900 dark:text-slate-100">Skills & Mastery</h1>
+        <p className="text-slate-600 dark:text-slate-400 text-lg">
           Comprehensive summary of my tech stack across frontend engineering, backend REST architecture, databases, cloud, and DevOps pipelines.
         </p>
       </div>
@@ -52,7 +52,7 @@ export function SkillsPage() {
               className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${
                 isActive
                   ? 'bg-cyan-500 text-black shadow-lg shadow-cyan-500/25'
-                  : 'glass-card text-slate-300 hover:text-cyan-400 hover:border-cyan-500/30'
+                  : 'glass-card text-slate-700 dark:text-slate-300 hover:text-cyan-400 hover:border-cyan-500/30'
               }`}
             >
               <Icon className="w-4 h-4" />
@@ -74,15 +74,15 @@ export function SkillsPage() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3 }}
-              className="glass-card p-6 rounded-2xl border border-slate-800 hover:border-cyan-500/40 transition-all space-y-4"
+              className="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-cyan-500/40 transition-all space-y-4"
             >
               <div className="flex items-center justify-between">
-                <h3 className="text-lg font-bold text-slate-100">{skill.name}</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">{skill.name}</h3>
                 <span className="text-sm font-extrabold text-cyan-400">{skill.proficiency}%</span>
               </div>
 
               {/* Progress Bar Container */}
-              <div className="w-full h-2.5 rounded-full bg-slate-800/80 overflow-hidden relative p-0.5">
+              <div className="w-full h-2.5 rounded-full bg-slate-200/80 dark:bg-slate-800/80 overflow-hidden relative p-0.5">
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: `${skill.proficiency}%` }}
@@ -92,7 +92,7 @@ export function SkillsPage() {
                 />
               </div>
 
-              <div className="flex justify-between items-center text-xs text-slate-400 pt-1 uppercase tracking-wider">
+              <div className="flex justify-between items-center text-xs text-slate-600 dark:text-slate-400 pt-1 uppercase tracking-wider">
                 <span>{skill.category}</span>
                 {skill.is_featured && (
                   <span className="text-cyan-400 font-semibold">★ Core Tech</span>

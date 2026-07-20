@@ -20,8 +20,8 @@ export function CertificatesPage() {
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
         <span className="text-xs font-bold uppercase tracking-widest text-cyan-400">Verified Credentials</span>
-        <h1 className="text-4xl font-extrabold text-slate-100">Certifications</h1>
-        <p className="text-slate-400 text-lg">
+        <h1 className="text-4xl font-extrabold text-slate-900 dark:text-slate-100">Certifications</h1>
+        <p className="text-slate-600 dark:text-slate-400 text-lg">
           Professional certifications validating technical proficiency in Cloud Architecture, Frontend Engineering, and Full Stack Development.
         </p>
       </div>
@@ -34,7 +34,7 @@ export function CertificatesPage() {
             <motion.div
               key={cert.id}
               whileHover={{ y: -4 }}
-              className="glass-card p-6 rounded-2xl border border-slate-800 hover:border-cyan-500/40 transition-all flex flex-col justify-between"
+              className="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-cyan-500/40 transition-all flex flex-col justify-between"
             >
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
@@ -42,17 +42,17 @@ export function CertificatesPage() {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold text-slate-100">{cert.title}</h3>
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">{cert.title}</h3>
                   <p className="text-cyan-400 text-sm font-semibold mt-1">{cert.organization}</p>
                 </div>
 
-                <div className="space-y-1 text-xs text-slate-400 border-t border-slate-800/60 pt-3">
+                <div className="space-y-1 text-xs text-slate-600 dark:text-slate-400 border-t border-slate-200/60 dark:border-slate-800/60 pt-3">
                   <div className="flex items-center gap-1">
                     <Calendar className="w-3.5 h-3.5 text-slate-500" />
                     <span>Issued: {cert.issue_date}</span>
                   </div>
                   {cert.credential_id && (
-                    <div className="flex items-center gap-1 font-mono text-slate-400">
+                    <div className="flex items-center gap-1 font-mono text-slate-600 dark:text-slate-400">
                       <ShieldCheck className="w-3.5 h-3.5 text-cyan-400" />
                       <span>ID: {cert.credential_id}</span>
                     </div>
@@ -61,7 +61,7 @@ export function CertificatesPage() {
               </div>
 
               {cert.credential_url && (
-                <div className="pt-6 mt-4 border-t border-slate-800/60">
+                <div className="pt-6 mt-4 border-t border-slate-200/60 dark:border-slate-800/60">
                   <a
                     href={cert.credential_url}
                     target="_blank"

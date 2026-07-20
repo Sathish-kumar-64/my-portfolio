@@ -49,7 +49,7 @@ export function AdminDashboardPage() {
             <LayoutDashboard className="w-6 h-6" />
           </div>
           <div>
-            <h1 className="text-2xl font-black text-slate-100">Admin Control Panel</h1>
+            <h1 className="text-2xl font-black text-slate-900 dark:text-slate-100">Admin Control Panel</h1>
             <p className="text-xs text-cyan-400 font-medium">JWT Authenticated Session</p>
           </div>
         </div>
@@ -64,13 +64,13 @@ export function AdminDashboardPage() {
       </div>
 
       {/* Admin Tabs */}
-      <div className="flex flex-wrap gap-3 border-b border-slate-800 pb-3">
+      <div className="flex flex-wrap gap-3 border-b border-slate-200 dark:border-slate-800 pb-3">
         <button
           onClick={() => setActiveTab('projects')}
           className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             activeTab === 'projects'
               ? 'bg-cyan-500 text-black shadow-md shadow-cyan-500/20'
-              : 'glass-card text-slate-300 hover:text-cyan-400'
+              : 'glass-card text-slate-700 dark:text-slate-300 hover:text-cyan-400'
           }`}
         >
           <FolderKanban className="w-4 h-4" />
@@ -82,7 +82,7 @@ export function AdminDashboardPage() {
           className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
             activeTab === 'blogs'
               ? 'bg-cyan-500 text-black shadow-md shadow-cyan-500/20'
-              : 'glass-card text-slate-300 hover:text-cyan-400'
+              : 'glass-card text-slate-700 dark:text-slate-300 hover:text-cyan-400'
           }`}
         >
           <FileText className="w-4 h-4" />
@@ -94,8 +94,8 @@ export function AdminDashboardPage() {
       {activeTab === 'projects' && (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Quick Create Project */}
-          <div className="glass-panel p-6 rounded-3xl border border-slate-800 space-y-4 h-fit">
-            <h3 className="text-lg font-bold text-slate-100 flex items-center gap-2">
+          <div className="glass-panel p-6 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4 h-fit">
+            <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
               <Plus className="w-5 h-5 text-cyan-400" />
               <span>Add New Project</span>
             </h3>
@@ -109,23 +109,23 @@ export function AdminDashboardPage() {
 
             <form onSubmit={handleAddProject} className="space-y-3">
               <div className="space-y-1">
-                <label className="text-xs text-slate-300 font-semibold">Title</label>
+                <label className="text-xs text-slate-700 dark:text-slate-300 font-semibold">Title</label>
                 <input
                   type="text"
                   value={newTitle}
                   onChange={(e) => setNewTitle(e.target.value)}
                   required
                   placeholder="e.g. Cloud ERP Module"
-                  className="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs focus:outline-none focus:border-cyan-500"
+                  className="w-full px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs focus:outline-none focus:border-cyan-500"
                 />
               </div>
 
               <div className="space-y-1">
-                <label className="text-xs text-slate-300 font-semibold">Category</label>
+                <label className="text-xs text-slate-700 dark:text-slate-300 font-semibold">Category</label>
                 <select
                   value={newCategory}
                   onChange={(e) => setNewCategory(e.target.value)}
-                  className="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs focus:outline-none focus:border-cyan-500"
+                  className="w-full px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs focus:outline-none focus:border-cyan-500"
                 >
                   <option value="fullstack">Full Stack</option>
                   <option value="frontend">Frontend</option>
@@ -134,14 +134,14 @@ export function AdminDashboardPage() {
               </div>
 
               <div className="space-y-1">
-                <label className="text-xs text-slate-300 font-semibold">Short Summary</label>
+                <label className="text-xs text-slate-700 dark:text-slate-300 font-semibold">Short Summary</label>
                 <textarea
                   rows={3}
                   value={newDesc}
                   onChange={(e) => setNewDesc(e.target.value)}
                   required
                   placeholder="Project goals and stack..."
-                  className="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-xs focus:outline-none focus:border-cyan-500"
+                  className="w-full px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-xs focus:outline-none focus:border-cyan-500"
                 />
               </div>
 
@@ -155,16 +155,16 @@ export function AdminDashboardPage() {
           </div>
 
           {/* Manage Projects Table */}
-          <div className="lg:col-span-2 glass-panel p-6 rounded-3xl border border-slate-800 space-y-4">
-            <h3 className="text-lg font-bold text-slate-100">Live Projects Registry</h3>
+          <div className="lg:col-span-2 glass-panel p-6 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4">
+            <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">Live Projects Registry</h3>
             <div className="space-y-3">
               {projects.map((p) => (
-                <div key={p.id} className="p-4 rounded-2xl glass-card border border-slate-800/80 flex items-center justify-between gap-4">
+                <div key={p.id} className="p-4 rounded-2xl glass-card border border-slate-200/80 dark:border-slate-800/80 flex items-center justify-between gap-4">
                   <div>
-                    <h4 className="text-sm font-bold text-slate-100">{p.title}</h4>
+                    <h4 className="text-sm font-bold text-slate-900 dark:text-slate-100">{p.title}</h4>
                     <span className="text-xs text-cyan-400 capitalize">{p.category}</span>
                   </div>
-                  <span className="px-3 py-1 rounded-full text-xs bg-slate-800 text-slate-300 border border-slate-700">
+                  <span className="px-3 py-1 rounded-full text-xs bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-700">
                     {p.project_status || 'completed'}
                   </span>
                 </div>
@@ -175,13 +175,13 @@ export function AdminDashboardPage() {
       )}
 
       {activeTab === 'blogs' && (
-        <div className="glass-panel p-6 rounded-3xl border border-slate-800 space-y-4">
-          <h3 className="text-lg font-bold text-slate-100">Published Blog Articles</h3>
+        <div className="glass-panel p-6 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-4">
+          <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">Published Blog Articles</h3>
           <div className="space-y-3">
             {blogs.map((b) => (
-              <div key={b.id} className="p-4 rounded-2xl glass-card border border-slate-800/80 flex items-center justify-between gap-4">
+              <div key={b.id} className="p-4 rounded-2xl glass-card border border-slate-200/80 dark:border-slate-800/80 flex items-center justify-between gap-4">
                 <div>
-                  <h4 className="text-sm font-bold text-slate-100">{b.title}</h4>
+                  <h4 className="text-sm font-bold text-slate-900 dark:text-slate-100">{b.title}</h4>
                   <span className="text-xs text-cyan-400">{b.category} • {b.views_count} views</span>
                 </div>
                 <span className="px-3 py-1 rounded-full text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">

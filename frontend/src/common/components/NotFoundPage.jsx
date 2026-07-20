@@ -9,8 +9,8 @@ export function NotFoundPage() {
         <span className="text-7xl font-black bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
           404
         </span>
-        <h1 className="text-2xl font-bold text-slate-100">Page Not Found</h1>
-        <p className="text-slate-400 text-sm leading-relaxed">
+        <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100">Page Not Found</h1>
+        <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
           The route or page you are looking for doesn't exist or has been relocated.
         </p>
 

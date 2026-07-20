@@ -43,8 +43,8 @@ export function ContactPage() {
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
         <span className="text-xs font-bold uppercase tracking-widest text-cyan-400">Get In Touch</span>
-        <h1 className="text-4xl font-extrabold text-slate-100">Contact Me</h1>
-        <p className="text-slate-400 text-lg">
+        <h1 className="text-4xl font-extrabold text-slate-900 dark:text-slate-100">Contact Me</h1>
+        <p className="text-slate-600 dark:text-slate-400 text-lg">
           Have a project, role, or technical inquiry? Send a direct message or connect via email.
         </p>
       </div>
@@ -53,7 +53,7 @@ export function ContactPage() {
         {/* Contact Info & Details */}
         <div className="space-y-8">
           <div className="glass-panel p-8 rounded-3xl border border-cyan-500/20 space-y-6">
-            <h2 className="text-2xl font-bold text-slate-100 flex items-center gap-2">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
               <MessageSquare className="w-5 h-5 text-cyan-400" />
               <span>Contact Details</span>
             </h2>
@@ -64,8 +64,8 @@ export function ContactPage() {
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-bold text-slate-200">Email Address</div>
-                  <a href="mailto:sathish.kumar@example.com" className="text-slate-400 hover:text-cyan-400 transition-colors">
+                  <div className="font-bold text-slate-800 dark:text-slate-200">Email Address</div>
+                  <a href="mailto:sathish.kumar@example.com" className="text-slate-600 dark:text-slate-400 hover:text-cyan-400 transition-colors">
                     sathish.kumar@example.com
                   </a>
                 </div>
@@ -76,8 +76,8 @@ export function ContactPage() {
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-bold text-slate-200">Phone / WhatsApp</div>
-                  <span className="text-slate-400">+91 98765 43210</span>
+                  <div className="font-bold text-slate-800 dark:text-slate-200">Phone / WhatsApp</div>
+                  <span className="text-slate-600 dark:text-slate-400">+91 98765 43210</span>
                 </div>
               </div>
 
@@ -86,15 +86,15 @@ export function ContactPage() {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-bold text-slate-200">Location</div>
-                  <span className="text-slate-400">Chennai, Tamil Nadu, India</span>
+                  <div className="font-bold text-slate-800 dark:text-slate-200">Location</div>
+                  <span className="text-slate-600 dark:text-slate-400">Chennai, Tamil Nadu, India</span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Google Maps Embed Container */}
-          <div className="rounded-3xl overflow-hidden glass-panel border border-slate-800 h-64 relative">
+          <div className="rounded-3xl overflow-hidden glass-panel border border-slate-200 dark:border-slate-800 h-64 relative">
             <iframe
               title="Location Map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.886539092!2d80.06892534575792!3d13.04752548480392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
@@ -111,9 +111,9 @@ export function ContactPage() {
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="glass-panel p-8 rounded-3xl border border-slate-800 space-y-6"
+          className="glass-panel p-8 rounded-3xl border border-slate-200 dark:border-slate-800 space-y-6"
         >
-          <h2 className="text-2xl font-bold text-slate-100">Send Message</h2>
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100">Send Message</h2>
 
           {status.success && (
             <div className="p-4 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-sm flex items-center gap-3">
@@ -132,7 +132,7 @@ export function ContactPage() {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="space-y-1">
-                <label className="text-xs font-semibold text-slate-300">Name</label>
+                <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">Name</label>
                 <input
                   type="text"
                   name="name"
@@ -140,12 +140,12 @@ export function ContactPage() {
                   onChange={handleChange}
                   required
                   placeholder="Your Name"
-                  className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-cyan-500"
+                  className="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:border-cyan-500"
                 />
               </div>
 
               <div className="space-y-1">
-                <label className="text-xs font-semibold text-slate-300">Email</label>
+                <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">Email</label>
                 <input
                   type="email"
                   name="email"
@@ -153,13 +153,13 @@ export function ContactPage() {
                   onChange={handleChange}
                   required
                   placeholder="name@example.com"
-                  className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-cyan-500"
+                  className="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:border-cyan-500"
                 />
               </div>
             </div>
 
             <div className="space-y-1">
-              <label className="text-xs font-semibold text-slate-300">Subject</label>
+              <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">Subject</label>
               <input
                 type="text"
                 name="subject"
@@ -167,12 +167,12 @@ export function ContactPage() {
                 onChange={handleChange}
                 required
                 placeholder="Project Inquiry / Job Opportunity"
-                className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-cyan-500"
+                className="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:border-cyan-500"
               />
             </div>
 
             <div className="space-y-1">
-              <label className="text-xs font-semibold text-slate-300">Message</label>
+              <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">Message</label>
               <textarea
                 name="message"
                 rows={5}
@@ -180,7 +180,7 @@ export function ContactPage() {
                 onChange={handleChange}
                 required
                 placeholder="Describe your project, timeline, or requirements..."
-                className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-cyan-500"
+                className="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:border-cyan-500"
               />
             </div>
 
