@@ -45,12 +45,12 @@ export function Navbar() {
           <img 
             src="/logo.png" 
             alt="Sathish Kumar Logo" 
-            className="h-11 w-auto object-contain drop-shadow-md"
+            className="h-16 sm:h-20 w-auto object-contain drop-shadow-lg scale-110 origin-left"
           />
         </NavLink>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-1 glass-panel px-4 py-1.5 rounded-full border border-slate-800">
+        <nav className="hidden lg:flex items-center gap-1 glass-panel px-4 py-1.5 rounded-full border border-slate-200 dark:border-slate-800">
           {navLinks.map((link) => {
             const Icon = link.icon;
             const isActive = location.pathname === link.path;
@@ -61,8 +61,8 @@ export function Navbar() {
                 className={({ isActive }) =>
                   `relative px-3.5 py-1.5 rounded-full text-sm font-medium transition-all duration-200 flex items-center gap-1.5 ${
                     isActive
-                      ? 'text-cyan-400 font-semibold'
-                      : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'
+                      ? 'text-cyan-600 dark:text-cyan-400 font-semibold'
+                      : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/40'
                   }`
                 }
               >
@@ -84,7 +84,7 @@ export function Navbar() {
         <div className="hidden lg:flex items-center gap-3">
           <button
             onClick={toggleTheme}
-            className="p-2.5 rounded-xl glass-card text-slate-300 hover:text-cyan-400 transition-colors border border-slate-800 hover:border-cyan-500/30"
+            className="p-2.5 rounded-xl glass-card text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors border border-slate-200 dark:border-slate-800 hover:border-cyan-500/30"
             title="Toggle Dark/Light Mode"
           >
             {theme === 'dark' ? <Sun className="w-5 h-5 text-amber-400" /> : <Moon className="w-5 h-5 text-indigo-400" />}

@@ -105,15 +105,15 @@ export function HomePage() {
           transition={{ duration: 0.6 }}
           className="relative group"
         >
-          <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 opacity-20 dark:opacity-30 group-hover:opacity-40 dark:group-hover:opacity-60 blur-xl transition duration-500" />
-          <div className="relative w-72 sm:w-80 h-96 rounded-3xl glass-panel p-4 border border-cyan-500/20 dark:border-cyan-500/30 flex flex-col justify-between overflow-hidden shadow-2xl shadow-cyan-500/5 dark:shadow-cyan-900/20">
-            <div className="w-full h-64 rounded-2xl bg-white dark:bg-gradient-to-tr dark:from-slate-900 dark:via-slate-800 dark:to-cyan-950 flex items-center justify-center border border-slate-100 dark:border-slate-700/60 overflow-hidden relative group-hover:scale-[1.02] transition-transform">
-              <img src="/profile.png" alt="Sathish Kumar" className="w-full h-full object-cover object-top" />
-            </div>
-
-            <div className="pt-3 text-center space-y-1">
-              <h3 className="font-bold text-slate-900 dark:text-slate-100 text-lg">Sathish Kumar</h3>
-              <p className="text-xs text-cyan-600 dark:text-cyan-400 font-medium">Senior Full Stack Architect</p>
+          <div className="relative w-72 sm:w-80 h-[400px] rounded-3xl glass-panel p-2 border border-cyan-500/20 dark:border-cyan-500/30 flex flex-col items-center overflow-hidden shadow-2xl shadow-cyan-500/10 dark:shadow-cyan-900/20 group">
+            <div className="w-full h-full rounded-[1.25rem] overflow-hidden relative group-hover:scale-[1.02] transition-transform duration-500">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0d14] via-[#0a0d14]/40 to-transparent z-10 opacity-90" />
+              <img src="/profile.png" alt="Sathish Kumar" className="w-full h-full object-cover object-center" />
+              
+              <div className="absolute bottom-6 left-0 right-0 z-20 text-center space-y-1.5 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="font-extrabold text-white text-2xl tracking-wide">Sathish Kumar</h3>
+                <p className="text-sm text-cyan-400 font-semibold uppercase tracking-wider">Senior Architect</p>
+              </div>
             </div>
           </div>
         </motion.div>
