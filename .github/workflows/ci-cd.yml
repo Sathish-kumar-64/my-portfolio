@@ -1,0 +1,74 @@
+name: CI/CD Pipeline - Portfolio
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  backend-checks:
+    name: Django Backend Lint & Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Backend Dependencies
+        run: |
+          cd backend
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Check Django Configuration
+        run: |
+          cd backend
+          python manage.py check
+
+      - name: Run Backend Tests
+        run: |
+          cd backend
+          python manage.py test modules/
+
+  frontend-checks:
+    name: React Frontend Lint & Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Frontend Dependencies
+        run: |
+          cd frontend
+          npm ci
+
+      - name: Build React Application
+        run: |
+          cd frontend
+          npm run build
+
+  deploy-trigger:
+    name: Trigger Deployments
+    needs: [backend-checks, frontend-checks]
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Render Backend Deploy Webhook
+        if: env.RENDER_DEPLOY_HOOK_URL != ''
+        run: |
+          curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        env:
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+
+      - name: Confirm Deployment Dispatch
+        run: echo "Automated checks passed. Render and Vercel will process deployment."
