@@ -43,22 +43,8 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
         <NavLink to="/" className="flex items-center gap-2 group">
-          <div className="flex items-center gap-1.5 group">
-            <div className="relative w-9 h-9 flex items-center justify-center">
-              <div className="absolute inset-0 bg-cyan-500/20 dark:bg-cyan-500/30 rounded-full blur-md group-hover:bg-cyan-500/40 transition-colors duration-300" />
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="relative w-8 h-8 text-cyan-600 dark:text-cyan-400 group-hover:scale-110 transition-transform duration-300 drop-shadow-md">
-                <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-            <span className="text-2xl font-black tracking-tighter flex items-center">
-              <span className="text-slate-900 dark:text-white">S</span>
-              <span className="bg-gradient-to-br from-cyan-500 to-blue-600 bg-clip-text text-transparent">K</span>
-            </span>
-          </div>
-          <span className="text-xl font-bold bg-gradient-to-r from-slate-800 via-slate-600 dark:from-slate-100 dark:via-slate-200 to-cyan-500 dark:to-cyan-400 bg-clip-text text-transparent">
-            Sathish<span className="text-cyan-400 font-light">.dev</span>
+          <span className="text-2xl font-bold bg-gradient-to-r from-slate-800 via-slate-600 dark:from-slate-100 dark:via-slate-200 to-cyan-500 dark:to-cyan-400 bg-clip-text text-transparent transition-transform group-hover:scale-105">
+            Sathish<span className="text-cyan-600 dark:text-cyan-400 font-light">.dev</span>
           </span>
         </NavLink>
 
