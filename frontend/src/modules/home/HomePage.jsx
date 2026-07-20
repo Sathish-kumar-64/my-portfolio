@@ -36,13 +36,13 @@ export function HomePage() {
           transition={{ duration: 0.6 }}
           className="space-y-6 max-w-2xl text-left"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
-            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50 dark:bg-cyan-500/10 border border-cyan-200 dark:border-cyan-500/30 text-cyan-600 dark:text-cyan-400 text-xs font-semibold uppercase tracking-wider">
+            <span className="w-2 h-2 rounded-full bg-cyan-500 dark:bg-cyan-400 animate-ping" />
             Available For New Projects & Roles
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-black text-slate-900 dark:text-slate-100 tracking-tight leading-tight">
-            Hi, I'm <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 dark:from-cyan-400 dark:via-blue-500 dark:to-indigo-400 bg-clip-text text-transparent">{profile?.full_name || 'Sathish Kumar'}</span>
+            Hi, I'm <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 dark:from-cyan-400 dark:via-blue-500 dark:to-indigo-400 bg-clip-text text-transparent">{profile?.full_name || 'Sathish Kumar'}</span>
           </h1>
 
           <div className="text-xl sm:text-2xl font-medium text-slate-700 dark:text-slate-300 h-10 flex items-center">
@@ -57,7 +57,7 @@ export function HomePage() {
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <NavLink
               to="/contact"
-              className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-bold text-sm shadow-lg shadow-cyan-500/25 flex items-center gap-2 hover:scale-[1.02] transition-all"
+              className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-600 text-white dark:text-black font-bold text-sm shadow-lg shadow-cyan-500/25 flex items-center gap-2 hover:scale-[1.02] transition-all"
             >
               <Mail className="w-4 h-4" />
               <span>Hire Me / Contact</span>
@@ -69,9 +69,9 @@ export function HomePage() {
                 e.preventDefault();
                 alert("Downloading Resume... (Attach resume PDF link in admin)");
               }}
-              className="px-6 py-3.5 rounded-xl glass-card text-slate-700 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-400 border border-slate-200 dark:border-slate-700 hover:border-cyan-500/40 text-sm font-semibold flex items-center gap-2 hover:scale-[1.02] transition-all"
+              className="px-6 py-3.5 rounded-xl glass-card text-slate-700 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-400 border border-slate-200 dark:border-slate-700 hover:border-cyan-500/40 hover:bg-white/90 dark:hover:bg-white/10 text-sm font-semibold flex items-center gap-2 hover:scale-[1.02] shadow-sm dark:shadow-none transition-all"
             >
-              <Download className="w-4 h-4 text-cyan-400" />
+              <Download className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
               <span>Download Resume</span>
             </a>
 
@@ -105,9 +105,9 @@ export function HomePage() {
           transition={{ duration: 0.6 }}
           className="relative group"
         >
-          <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-600 opacity-30 group-hover:opacity-60 blur-xl transition duration-500" />
-          <div className="relative w-72 sm:w-80 h-96 rounded-3xl glass-panel p-4 border border-cyan-500/30 flex flex-col justify-between overflow-hidden shadow-2xl">
-            <div className="w-full h-64 rounded-2xl bg-gradient-to-tr from-slate-200 via-slate-100 to-cyan-50 dark:from-slate-900 dark:via-slate-800 dark:to-cyan-950 flex items-center justify-center border border-slate-200 dark:border-slate-700/60 overflow-hidden relative group-hover:scale-[1.02] transition-transform">
+          <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 opacity-20 dark:opacity-30 group-hover:opacity-40 dark:group-hover:opacity-60 blur-xl transition duration-500" />
+          <div className="relative w-72 sm:w-80 h-96 rounded-3xl glass-panel p-4 border border-cyan-500/20 dark:border-cyan-500/30 flex flex-col justify-between overflow-hidden shadow-2xl shadow-cyan-500/5 dark:shadow-cyan-900/20">
+            <div className="w-full h-64 rounded-2xl bg-white dark:bg-gradient-to-tr dark:from-slate-900 dark:via-slate-800 dark:to-cyan-950 flex items-center justify-center border border-slate-100 dark:border-slate-700/60 overflow-hidden relative group-hover:scale-[1.02] transition-transform">
               <img src="/profile.jpg" alt="Sathish Kumar" className="w-full h-full object-cover object-top" />
             </div>
 
@@ -133,10 +133,10 @@ export function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="flex items-end justify-between border-b border-slate-800/80 pb-4">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-cyan-400">Portfolio Highlights</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-cyan-600 dark:text-cyan-400">Portfolio Highlights</span>
             <h2 className="text-3xl font-extrabold text-slate-900 dark:text-slate-100 mt-1">Featured Work</h2>
           </div>
-          <NavLink to="/projects" className="flex items-center gap-1 text-sm font-semibold text-cyan-400 hover:underline">
+          <NavLink to="/projects" className="flex items-center gap-1 text-sm font-semibold text-cyan-600 dark:text-cyan-400 hover:underline">
             <span>View All Projects</span>
             <ArrowRight className="w-4 h-4" />
           </NavLink>
@@ -147,10 +147,10 @@ export function HomePage() {
             <motion.div
               key={project.id}
               whileHover={{ y: -6 }}
-              className="glass-card p-6 rounded-2xl border border-slate-800 hover:border-cyan-500/40 transition-all flex flex-col justify-between"
+              className="glass-card bg-white/70 dark:bg-white/5 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-cyan-500/40 transition-all flex flex-col justify-between shadow-lg shadow-slate-200/50 dark:shadow-none"
             >
               <div className="space-y-4">
-                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 uppercase tracking-wider">
+                <span className="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-50 dark:bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-200 dark:border-cyan-500/20 uppercase tracking-wider">
                   {project.category}
                 </span>
                 <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">{project.title}</h3>
@@ -166,7 +166,7 @@ export function HomePage() {
                 </div>
               </div>
 
-              <div className="pt-6 border-t border-slate-800/60 mt-6 flex items-center justify-between text-xs">
+              <div className="pt-6 border-t border-slate-200 dark:border-slate-800/60 mt-6 flex items-center justify-between text-xs">
                 <a
                   href={project.github_url}
                   target="_blank"
@@ -180,7 +180,7 @@ export function HomePage() {
                   href={project.live_demo_url}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-cyan-400 hover:underline font-semibold flex items-center gap-1"
+                  className="text-cyan-600 dark:text-cyan-400 hover:underline font-semibold flex items-center gap-1"
                 >
                   <span>Live Demo</span>
                   <ArrowRight className="w-3.5 h-3.5" />
