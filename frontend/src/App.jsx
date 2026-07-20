@@ -26,7 +26,7 @@ export default function App() {
     <ThemeProvider>
       <AuthProvider>
         <BrowserRouter>
-          <div className="min-h-screen flex flex-col relative text-slate-100 bg-[#0a0d14] selection:bg-cyan-500 selection:text-black">
+          <div className="min-h-screen flex flex-col relative text-slate-900 bg-slate-50 dark:text-slate-100 dark:bg-[#0a0d14] selection:bg-cyan-500 selection:text-black transition-colors duration-300">
             {/* Top Progress Bar & Background Canvas */}
             <ScrollProgressBar />
             <CanvasBackground />

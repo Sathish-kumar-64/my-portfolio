@@ -41,15 +41,15 @@ export function HomePage() {
             Available For New Projects & Roles
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-black text-slate-100 tracking-tight leading-tight">
-            Hi, I'm <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-400 bg-clip-text text-transparent">{profile?.full_name || 'Sathish Kumar'}</span>
+          <h1 className="text-4xl sm:text-6xl font-black text-slate-900 dark:text-slate-100 tracking-tight leading-tight">
+            Hi, I'm <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 dark:from-cyan-400 dark:via-blue-500 dark:to-indigo-400 bg-clip-text text-transparent">{profile?.full_name || 'Sathish Kumar'}</span>
           </h1>
 
-          <div className="text-xl sm:text-2xl font-medium text-slate-300 h-10 flex items-center">
+          <div className="text-xl sm:text-2xl font-medium text-slate-700 dark:text-slate-300 h-10 flex items-center">
             <TypingAnimation words={roles} speed={80} pause={2200} />
           </div>
 
-          <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
+          <p className="text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed">
             {profile?.bio || 'Passionate Full Stack Engineer with expertise in building scalable web applications using React 19, Django REST Framework, PostgreSQL, and Cloud microservices. Dedicated to SOLID design principles and clean architecture.'}
           </p>
 
@@ -69,7 +69,7 @@ export function HomePage() {
                 e.preventDefault();
                 alert("Downloading Resume... (Attach resume PDF link in admin)");
               }}
-              className="px-6 py-3.5 rounded-xl glass-card text-slate-200 hover:text-cyan-400 border border-slate-700 hover:border-cyan-500/40 text-sm font-semibold flex items-center gap-2 hover:scale-[1.02] transition-all"
+              className="px-6 py-3.5 rounded-xl glass-card text-slate-700 dark:text-slate-200 hover:text-cyan-600 dark:hover:text-cyan-400 border border-slate-200 dark:border-slate-700 hover:border-cyan-500/40 text-sm font-semibold flex items-center gap-2 hover:scale-[1.02] transition-all"
             >
               <Download className="w-4 h-4 text-cyan-400" />
               <span>Download Resume</span>
@@ -80,7 +80,7 @@ export function HomePage() {
                 href="https://github.com/sathishkumar"
                 target="_blank"
                 rel="noreferrer"
-                className="p-3 rounded-xl glass-card text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
+                className="p-3 rounded-xl glass-card text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
                 title="GitHub Profile"
               >
                 <Github className="w-5 h-5" />
@@ -89,7 +89,7 @@ export function HomePage() {
                 href="https://linkedin.com/in/sathishkumar"
                 target="_blank"
                 rel="noreferrer"
-                className="p-3 rounded-xl glass-card text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
+                className="p-3 rounded-xl glass-card text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
                 title="LinkedIn Profile"
               >
                 <Linkedin className="w-5 h-5" />
@@ -107,16 +107,13 @@ export function HomePage() {
         >
           <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-600 opacity-30 group-hover:opacity-60 blur-xl transition duration-500" />
           <div className="relative w-72 sm:w-80 h-96 rounded-3xl glass-panel p-4 border border-cyan-500/30 flex flex-col justify-between overflow-hidden shadow-2xl">
-            <div className="w-full h-64 rounded-2xl bg-gradient-to-tr from-slate-900 via-slate-800 to-cyan-950 flex items-center justify-center border border-slate-700/60 overflow-hidden relative">
-              <div className="absolute inset-0 bg-cyan-500/10 mix-blend-overlay" />
-              <span className="text-7xl font-black bg-gradient-to-tr from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                SK
-              </span>
+            <div className="w-full h-64 rounded-2xl bg-gradient-to-tr from-slate-200 via-slate-100 to-cyan-50 dark:from-slate-900 dark:via-slate-800 dark:to-cyan-950 flex items-center justify-center border border-slate-200 dark:border-slate-700/60 overflow-hidden relative group-hover:scale-[1.02] transition-transform">
+              <img src="/profile.jpg" alt="Sathish Kumar" className="w-full h-full object-cover object-top" />
             </div>
 
             <div className="pt-3 text-center space-y-1">
-              <h3 className="font-bold text-slate-100 text-lg">Sathish Kumar</h3>
-              <p className="text-xs text-cyan-400 font-medium">Senior Full Stack Architect</p>
+              <h3 className="font-bold text-slate-900 dark:text-slate-100 text-lg">Sathish Kumar</h3>
+              <p className="text-xs text-cyan-600 dark:text-cyan-400 font-medium">Senior Full Stack Architect</p>
             </div>
           </div>
         </motion.div>
@@ -137,7 +134,7 @@ export function HomePage() {
         <div className="flex items-end justify-between border-b border-slate-800/80 pb-4">
           <div>
             <span className="text-xs font-bold uppercase tracking-widest text-cyan-400">Portfolio Highlights</span>
-            <h2 className="text-3xl font-extrabold text-slate-100 mt-1">Featured Work</h2>
+            <h2 className="text-3xl font-extrabold text-slate-900 dark:text-slate-100 mt-1">Featured Work</h2>
           </div>
           <NavLink to="/projects" className="flex items-center gap-1 text-sm font-semibold text-cyan-400 hover:underline">
             <span>View All Projects</span>
@@ -156,13 +153,13 @@ export function HomePage() {
                 <span className="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 uppercase tracking-wider">
                   {project.category}
                 </span>
-                <h3 className="text-xl font-bold text-slate-100">{project.title}</h3>
-                <p className="text-slate-400 text-sm line-clamp-3 leading-relaxed">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">{project.title}</h3>
+                <p className="text-slate-600 dark:text-slate-400 text-sm line-clamp-3 leading-relaxed">
                   {project.short_description}
                 </p>
                 <div className="flex flex-wrap gap-2 pt-2">
                   {project.tech_stack.map((tech) => (
-                    <span key={tech} className="px-2.5 py-1 rounded-md text-xs bg-slate-800 text-slate-300">
+                    <span key={tech} className="px-2.5 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">
                       {tech}
                     </span>
                   ))}
@@ -174,7 +171,7 @@ export function HomePage() {
                   href={project.github_url}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-slate-400 hover:text-cyan-400 flex items-center gap-1 font-medium"
+                  className="text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 flex items-center gap-1 font-medium"
                 >
                   <Github className="w-4 h-4" />
                   <span>Repository</span>
