@@ -108,7 +108,7 @@ export function HomePage() {
           <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 opacity-20 dark:opacity-30 group-hover:opacity-40 dark:group-hover:opacity-60 blur-xl transition duration-500" />
           <div className="relative w-72 sm:w-80 h-96 rounded-3xl glass-panel p-4 border border-cyan-500/20 dark:border-cyan-500/30 flex flex-col justify-between overflow-hidden shadow-2xl shadow-cyan-500/5 dark:shadow-cyan-900/20">
             <div className="w-full h-64 rounded-2xl bg-white dark:bg-gradient-to-tr dark:from-slate-900 dark:via-slate-800 dark:to-cyan-950 flex items-center justify-center border border-slate-100 dark:border-slate-700/60 overflow-hidden relative group-hover:scale-[1.02] transition-transform">
-              <img src="/profile.jpg" alt="Sathish Kumar" className="w-full h-full object-cover object-top" />
+              <img src="/profile.png" alt="Sathish Kumar" className="w-full h-full object-cover object-top" />
             </div>
 
             <div className="pt-3 text-center space-y-1">
