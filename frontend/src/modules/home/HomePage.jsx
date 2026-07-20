@@ -105,10 +105,14 @@ export function HomePage() {
           transition={{ duration: 0.6 }}
           className="relative group"
         >
-          <div className="relative w-72 sm:w-80 h-[400px] rounded-3xl glass-panel p-2 border border-cyan-500/20 dark:border-cyan-500/30 flex flex-col items-center overflow-hidden shadow-2xl shadow-cyan-500/10 dark:shadow-cyan-900/20 group">
-            <div className="w-full h-full rounded-[1.25rem] overflow-hidden relative group-hover:scale-[1.02] transition-transform duration-500">
+          <div className="relative w-72 sm:w-80 h-[380px] rounded-3xl glass-panel p-2 border border-cyan-500/20 dark:border-cyan-500/30 flex flex-col items-center overflow-hidden shadow-2xl shadow-cyan-500/10 dark:shadow-cyan-900/20 group">
+            <div className="w-full h-full rounded-[1.25rem] overflow-hidden relative transition-transform duration-500">
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0d14] via-[#0a0d14]/40 to-transparent z-10 opacity-90" />
-              <img src="/profile.png" alt="Sathish Kumar" className="w-full h-full object-cover object-center" />
+              <img 
+                src="/profile.png" 
+                alt="Sathish Kumar" 
+                className="w-full h-full object-cover object-top scale-[1.15] group-hover:scale-[1.20] origin-top transition-transform duration-700" 
+              />
               
               <div className="absolute bottom-6 left-0 right-0 z-20 text-center space-y-1.5 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                 <h3 className="font-extrabold text-white text-2xl tracking-wide">Sathish Kumar</h3>
